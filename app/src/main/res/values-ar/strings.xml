@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple Voice Recorder</string>
-    <string name="app_launcher_name">Voice Recorder</string>
+
     <string name="recording_saved_successfully">تم حفظ التسجيل بنجاح</string>
     <string name="recording">تسجيل</string>
     <string name="no_recordings_found">لا توجد تسجيلات تم إنشاؤها بواسطة هذا التطبيق
@@ -30,8 +29,5 @@
     <!-- FAQ -->
     <string name="faq_1_title">هل يمكنني إخفاء رمز الإشعار أثناء التسجيل؟</string>
     <string name="faq_1_text">حسنًا ، هذا يعتمد. أثناء استخدامك لجهازك ، لم يعد من الممكن إخفاء إشعارات تطبيقات كهذه تمامًا. إذا قمت بالتحقق من عنصر الإعداد المناسب ، فسيبذل التطبيق قصارى جهده لإخفائه. ومع ذلك ، يمكنك إخفائه على شاشة القفل ، إذا قمت بتعطيل عرض الإشعارات الحساسة في إعدادات جهازك.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
-    -->
+
 </resources>

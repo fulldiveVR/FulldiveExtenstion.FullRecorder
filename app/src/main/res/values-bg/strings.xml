@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Обикновен Диктофон</string>
-    <string name="app_launcher_name">Диктофон</string>
+
     <string name="recording_saved_successfully">Записът е запазен успешно</string>
     <string name="recording">Записване</string>
     <string name="no_recordings_found">Не са открити записи,
@@ -26,8 +25,5 @@
     <!-- FAQ -->
     <string name="faq_1_title">Мога ли да скрия иконата за уведомяване по време на запис\?</string>
     <string name="faq_1_text">Зависи. Докато използвате устройството си, вече не е възможно напълно да скриете известията за приложения като това. Ако отметнете правилния елемент за настройка, приложението ще направи всичко възможно да го скрие. Можете обаче да го скриете на заключения екран, ако деактивирате показването на чувствителни известия в настройките на вашето устройство.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
-    -->
+
 </resources>

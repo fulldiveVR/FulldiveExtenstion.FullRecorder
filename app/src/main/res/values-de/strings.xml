@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Schlichtes Diktiergerät</string>
-    <string name="app_launcher_name">Diktiergerät</string>
+
     <string name="recording_saved_successfully">Aufnahme erfolgreich gespeichert</string>
     <string name="recording">Aufnahme</string>
     <string name="no_recordings_found">Es wurden keine von dieser Anwendung

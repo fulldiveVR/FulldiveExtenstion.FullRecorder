@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simpla Sonregistrilo</string>
-    <string name="app_launcher_name">Sonregistrilo</string>
+
     <string name="recording_saved_successfully">Recording saved successfully</string>
     <string name="recording">Recording</string>
     <string name="no_recordings_found">No recordings created by this app

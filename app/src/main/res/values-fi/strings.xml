@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple Voice Recorder</string>
-    <string name="app_launcher_name">Ääninauhuri</string>
+
     <string name="recording_saved_successfully">Nauhoitus tallennettu onnistuneesti</string>
     <string name="recording">Tallenne</string>
     <string name="no_recordings_found">Tällä sovelluksella luotuja

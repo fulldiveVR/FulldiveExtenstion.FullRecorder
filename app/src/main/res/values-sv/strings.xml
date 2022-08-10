@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simpel röstinspelning</string>
-    <string name="app_launcher_name">Röstinspelning</string>
     <string name="recording_saved_successfully">Inspelning framgångsrikt sparad</string>
     <string name="recording">Spelar in</string>
     <string name="no_recordings_found">Inga inspelningar skapad med denna app

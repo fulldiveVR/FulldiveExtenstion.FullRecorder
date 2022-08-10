@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Egyszerű hangrögzítő</string>
-    <string name="app_launcher_name">Hangrögzítő</string>
+
     <string name="recording_saved_successfully">Rögzítés sikeresen mentve</string>
     <string name="recording">Rögzítés</string>
     <string name="no_recordings_found">Nem található az alkalmazás által

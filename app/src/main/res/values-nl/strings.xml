@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Eenvoudige Voicerecorder</string>
-    <string name="app_launcher_name">Voicerecorder</string>
+
     <string name="recording_saved_successfully">Opname is opgeslagen</string>
     <string name="recording">Opnemen</string>
     <string name="no_recordings_found">Geen opnames gemaakt door

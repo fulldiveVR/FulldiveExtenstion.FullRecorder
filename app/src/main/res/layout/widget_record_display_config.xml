@@ -47,7 +47,10 @@
             android:layout_width="@dimen/widget_colorpicker_size"
             android:layout_height="@dimen/widget_colorpicker_size"
             android:layout_above="@+id/config_save"
-            android:layout_margin="@dimen/tiny_margin" />
+            android:layout_marginStart="@dimen/tiny_margin"
+            android:layout_marginTop="@dimen/tiny_margin"
+            android:layout_marginEnd="@dimen/tiny_margin"
+            android:layout_marginBottom="@dimen/tiny_margin" />
 
         <RelativeLayout
             android:id="@+id/config_widget_seekbar_holder"

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple Voice Recorder</string>
-    <string name="app_launcher_name">Gravador de voz</string>
+
     <string name="recording_saved_successfully">Gravación gardada como
 \n\"%s\"</string>
     <string name="recording">Gravación</string>

@@ -27,7 +27,57 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+
+        <LinearLayout
+            android:id="@+id/lyt_support"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/medium_margin"
+            android:background="@drawable/section_holder_stroke"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_all_corners"
+                android:orientation="horizontal"
+                >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    >
+
+                    <com.simplemobiletools.commons.views.MyTextView
+                        android:id="@+id/txtSupportUs"
+                        style="@style/SettingsTextLabelStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Support Us"
+                        android:textSize="20dp" />
+                    <com.simplemobiletools.commons.views.MyTextView
+                        android:layout_below="@id/txtSupportUs"
+                        style="@style/SettingsTextLabelStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Buy fulldive a cup of coffe" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_next"
+                    app:tint="@color/hint_white" />
+
+            </LinearLayout>
+        </LinearLayout>
+
         <com.simplemobiletools.commons.views.MyViewPager
+            android:layout_below="@+id/lyt_support"
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
