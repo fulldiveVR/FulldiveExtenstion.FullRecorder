@@ -2,6 +2,14 @@
 
 buildscript {
     ext.kotlin_version = '1.6.21'
+    ext {
+        propCompileSdkVersion = 31
+        propMinSdkVersion = 21
+        propTargetSdkVersion = propCompileSdkVersion
+        propVersionCode = 1
+        propVersionName = '5.34.26'
+        kotlin_version = '1.7.10'
+    }
     repositories {
         google()
         jcenter()
