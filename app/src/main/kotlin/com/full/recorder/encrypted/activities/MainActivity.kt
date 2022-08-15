@@ -49,14 +49,7 @@ class MainActivity : SimpleActivity() {
             }
         }
 
-        lyt_support.setOnClickListener {
-            DonationManager.purchaseFromSettings(
-                this,
-                onPurchased = {
-                    PopupManager().showDonationSuccess(this)
-                }
-            )
-        }
+
     }
 
     override fun onResume() {
