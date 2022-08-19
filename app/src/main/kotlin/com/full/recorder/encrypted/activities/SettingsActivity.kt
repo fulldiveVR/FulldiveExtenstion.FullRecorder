@@ -45,9 +45,10 @@ class SettingsActivity : SimpleActivity() {
             it.setTextColor(getProperPrimaryColor())
         }
 
-        arrayOf(settings_color_customization_holder, settings_general_settings_holder).forEach {
+        arrayOf(settings_color_customization_holder, settings_general_settings_holder,lyt_support).forEach {
             it.background.applyColorFilter(getProperBackgroundColor().getContrastColor())
         }
+        next_icon.setColorFilter(getProperBackgroundColor().getContrastColor(), android.graphics.PorterDuff.Mode.SRC_IN);
         lyt_support.setOnClickListener {
             DonationManager.purchaseFromSettings(
                 this,
