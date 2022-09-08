@@ -8,6 +8,10 @@ if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 }
 
+def versionMajor = 1
+def versionMinor = 0
+def versionPatch = 0
+
 android {
     compileSdkVersion 32
 
@@ -15,33 +19,37 @@ android {
         applicationId "com.full.recorder.top.secured.encrypted"
         minSdkVersion 21
         targetSdkVersion 32
-        versionCode 26
-        versionName "5.9.0"
+
+        versionCode versionMajor*10000+versionMinor*100+versionPatch
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+        resValue "string","app_version", "${defaultConfig.versionName}"
+        applicationVariants.all { variant ->
+            variant.outputs.each { output ->
+                output.outputFileName = "Full4kTV-v${android.defaultConfig.versionName}-${variant.buildType.name}.apk"
+            }
+        }
+
         setProperty("archivesBaseName", "voice-recorder")
         vectorDrawables.useSupportLibrary = true
     }
 
     signingConfigs {
-        if (keystorePropertiesFile.exists()) {
-            release {
-                keyAlias keystoreProperties['keyAlias']
-                keyPassword keystoreProperties['keyPassword']
-                storeFile file(keystoreProperties['storeFile'])
-                storePassword keystoreProperties['storePassword']
-            }
+        release {
+            storeFile file('../keys/keys.jks')
+            storePassword System.getenv("FULLDIVE_KEYSTORE_PASSWORD")
+            keyAlias System.getenv("FULLDIVE_ALIAS")
+            keyPassword System.getenv("FULLDIVE_ALIAS_PASSWORD")
         }
     }
 
     buildTypes {
-        debug {
-            applicationIdSuffix ".debug"
-        }
         release {
-            minifyEnabled true
+            signingConfig signingConfigs.release
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            if (keystorePropertiesFile.exists()) {
-                signingConfig signingConfigs.release
-            }
+        }
+        debug {
+
         }
     }
 
