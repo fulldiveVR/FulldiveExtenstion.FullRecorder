@@ -4,9 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.*
-import com.simplemobiletools.commons.models.FAQItem
 import com.full.recorder.encrypted.BuildConfig
 import com.full.recorder.encrypted.R
 import com.full.recorder.encrypted.adapters.ViewPagerAdapter
@@ -20,7 +20,6 @@ import me.grantland.widget.AutofitHelper
 
 class MainActivity : SimpleActivity() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -31,15 +30,6 @@ class MainActivity : SimpleActivity() {
             return
         }
 
-        handlePermission(PERMISSION_RECORD_AUDIO) {
-            if (it) {
-                tryInitVoiceRecorder()
-            } else {
-                toast(R.string.no_audio_permissions)
-                finish()
-            }
-        }
-
         if (config.recordAfterLaunch && !RecorderService.isRunning) {
             Intent(this@MainActivity, RecorderService::class.java).apply {
                 try {
@@ -48,8 +38,17 @@ class MainActivity : SimpleActivity() {
                 }
             }
         }
+    }
 
-
+    override fun onStart() {
+        super.onStart()
+        handlePermission(PERMISSION_RECORD_AUDIO) {
+            if (it) {
+                tryInitVoiceRecorder()
+            } else {
+                toast(R.string.no_audio_permissions, Toast.LENGTH_LONG)
+            }
+        }
     }
 
     override fun onResume() {

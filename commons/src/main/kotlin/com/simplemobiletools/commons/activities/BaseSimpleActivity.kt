@@ -1,5 +1,6 @@
 package com.simplemobiletools.commons.activities
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.ActivityManager
@@ -828,6 +829,10 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         actionOnPermission = null
         if (hasPermission(permissionId)) {
             callback(true)
+        } else if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.RECORD_AUDIO)) {
+            toast(applicationContext.getString(R.string.permission_toast_text), Toast.LENGTH_LONG)
+            isAskingPermissions = true
+            actionOnPermission = callback
         } else {
             isAskingPermissions = true
             actionOnPermission = callback
