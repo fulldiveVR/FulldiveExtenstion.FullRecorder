@@ -12,7 +12,7 @@ android {
     compileSdkVersion 33
 
     defaultConfig {
-        applicationId "com.full.recorder.top.secure.encrypted"
+        applicationId "com.full.recorder.top.secured.encrypted"
         minSdkVersion 21
         targetSdkVersion 33
         versionCode 26
