@@ -24,10 +24,10 @@ android {
     signingConfigs {
        // if (keystorePropertiesFile.exists()) {
             release {
-                keyAlias keystoreProperties['keyAlias']
-                keyPassword keystoreProperties['keyPassword']
-                storeFile file(keystoreProperties['storeFile'])
-                storePassword keystoreProperties['storePassword']
+                storeFile file('../keys/keys.jks')
+                storePassword System.getenv("FULLDIVE_KEYSTORE_PASSWORD")
+                keyAlias System.getenv("FULLDIVE_ALIAS")
+                keyPassword System.getenv("FULLDIVE_ALIAS_PASSWORD")
             }
       //  }
     }
